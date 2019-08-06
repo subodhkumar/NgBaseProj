@@ -1,0 +1,19 @@
+<div>
+        <div *ngIf="page_counter>1">
+                <div (click)="onPrevClick()"> Prev </div>
+            </div>
+    <div >
+        <table>
+            <tr>
+                <th *ngFor="let h of headers">{{h}}</th>
+            </tr>
+            <tr *ngFor="let r of rows">
+                <td *ngFor="let h of headers">{{r[h]}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="page_counter<5">
+            <div (click)="onNextClick()"> Next </div>
+        </div>
+    
+</div>
